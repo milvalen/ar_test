@@ -2,9 +2,9 @@ import 'package:ar_flutter_plugin_flutterflow/ar_flutter_plugin.dart';
 import 'package:flutter/material.dart';
 import 'dart:async';
 import 'package:flutter/services.dart';
-import 'package:ar_test/widgets/DebugOptionsWidget.dart';
+import 'package:ar_test/widgets/objects_on_planes.dart';
 
-//TODO: Debug AVD Compatibility
+//TODO: real device debug
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -12,6 +12,8 @@ void main() {
 }
 
 class MyApp extends StatefulWidget {
+  const MyApp({super.key});
+
   @override
   _MyAppState createState() => _MyAppState();
 }
@@ -70,7 +72,7 @@ class ExampleList extends StatelessWidget {
           'Debug Options',
           'Visualize feature points, planes and world coordinate system',
               () => Navigator.push(context,
-              MaterialPageRoute(builder: (context) => DebugOptionsWidget()))),
+              MaterialPageRoute(builder: (context) => ObjectsOnPlanes()))),
     ];
     return ListView(
       children:
